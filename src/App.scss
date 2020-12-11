@@ -1,0 +1,40 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.board {
+  margin: auto;
+  width: 500px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  width: 9px;
+  height: 9px;
+  border: 0.5px solid black;
+}
+
+.alive,
+.dead {
+  @extend .cell;
+}
+
+.alive {
+  background-color: #000;
+}
+
+.dead {
+  background-color: #fff;
+}
