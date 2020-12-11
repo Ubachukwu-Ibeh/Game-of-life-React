@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Cell(props) {
+function Cell(props) {
     const state = props.data.cellStates[props.data.id];
     
     const changeMyState = () => {
@@ -15,3 +15,4 @@ export default function Cell(props) {
         </div>
     )
 }
+export default React.memo(Cell);
