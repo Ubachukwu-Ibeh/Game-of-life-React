@@ -27,8 +27,9 @@ function App() {
           else if (cellStates[e] === 'alive' && liveNeighbours > 3) nextGen[e] = 'dead';
           else if (!cellStates[e] === 'alive' && liveNeighbours === 3) nextGen[e] = 'alive';
         })
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
           setCellStates({ ...nextGen });
+          clearTimeout(timeout);
         }, 100);
     }
     runSim();
