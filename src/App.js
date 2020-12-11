@@ -22,7 +22,7 @@ function App() {
             cellStates[e + p] && cellStates[e + p] === 'alive' && liveNeighbours++;
             cellStates[e - p] && cellStates[e - p] === 'alive' && liveNeighbours++;
           })
-          if ((cellStates[e] === 'alive' && liveNeighbours === 2) || liveNeighbours === 3) nextGen[e] = 'alive';
+          if (cellStates[e] === 'alive' && liveNeighbours === 2 || cellStates[e] === 'alive' && liveNeighbours === 3) nextGen[e] = 'alive';
           else if (cellStates[e] === 'alive' && liveNeighbours < 2) nextGen[e] = 'dead';
           else if (cellStates[e] === 'alive' && liveNeighbours > 3) nextGen[e] = 'dead';
           else if (!cellStates[e] === 'alive' && liveNeighbours === 3) nextGen[e] = 'alive';
