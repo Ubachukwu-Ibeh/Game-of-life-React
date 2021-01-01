@@ -4,8 +4,7 @@ import "./App.css";
 
 function App() {
   const [cellStates, setCellStates] = useState((() => {
-    const arr = [], obj = {};
-    arr = Array(1035).fill('dead');
+    const arr = Array(1035).fill('dead') , obj = {};
     arr.forEach((e, i) => obj[i] = e)
     return obj;
   })());
